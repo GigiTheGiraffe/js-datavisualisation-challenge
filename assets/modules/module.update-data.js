@@ -13,7 +13,7 @@ function fetchData() {
             });
         });
 }
-function updateChart() {
+function updateData() {
     fetch("https://canvasjs.com/services/data/datapoints.php" , {
         cache: "no-store" // Indique au navigateur de ne pas utiliser le cache pour avoir accès aux données aléatoires
     })
@@ -27,8 +27,8 @@ function updateChart() {
             });
         });
     });
-    setTimeout(function(){updateChart()}, 1000); // Mis à jour toutes les secondes
+    setTimeout(function(){updateData()}, 1000); // Mis à jour toutes les secondes
 }
 
 // Appel fetchData() pour initialiser les données une seule fois au démarrage
-export { dataPoints, fetchData, updateChart };
+export { dataPoints, fetchData, updateData };
