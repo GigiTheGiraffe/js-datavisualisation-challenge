@@ -1,7 +1,8 @@
 function createContainer(id) {
-    const section = document.createElement("section");
-    section.setAttribute("id", id);
-    return section;
+    const canvas = document.createElement("canvas");
+    canvas.setAttribute("id", id);
+    canvas.width = "100%";
+    return canvas;
 }
 /*Fonction pour insérer un conteneur dans un élément spécifié à une position donnée.
 element : l'élément parent dans lequel le conteneur sera placé.
