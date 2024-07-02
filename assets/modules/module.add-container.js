@@ -1,7 +1,7 @@
 function createContainer(id) {
     const canvas = document.createElement("canvas");
     canvas.setAttribute("id", id);
-    canvas.width = "100%";
+    canvas.style.width = "100%";
     return canvas;
 }
 /*Fonction pour insérer un conteneur dans un élément spécifié à une position donnée.
