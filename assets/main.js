@@ -1,8 +1,10 @@
-import { fetchData, updateData } from "./modules/module.update-data.js";
+import { createLiveChart, updateChart } from "./modules/module.live-chart.js";
 import { selectTd } from "./modules/module.data-from-tables.js";
-import { chart } from "./modules/module.create-charts.js";
-fetchData();
-updateData();
+//import { chart } from "./modules/module.create-charts.js";
+import { dataPoints } from "./modules/module.live-chart.js";
+createLiveChart();
+console.log(dataPoints)
+updateChart();
 //Création d'une array pour prendre toutes les données de la table crime
 /*for (const td of dataCrimeTable) {
   console.log(td.textContent);
