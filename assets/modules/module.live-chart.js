@@ -56,6 +56,7 @@ function updateChart() {
             dataPoints.forEach(point => {
                 newData.push(point.y);
             });
+            newData = [newData[0]]
             chart.addData(newData, i);
             i++;
         });
