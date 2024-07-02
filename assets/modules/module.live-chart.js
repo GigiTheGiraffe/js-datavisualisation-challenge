@@ -17,7 +17,7 @@ function createLiveChart() {
             const Chart = toastui.Chart;
             const el = liveChart;
             const data = {
-                categories: ['0','1', '2', '3', '4', '5', '6', '7', '8', '9'],
+                categories: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
                 series: [
                     {
                         name: 'Valeur',
@@ -34,7 +34,7 @@ function createLiveChart() {
                 },
                 series: {
                     shift: true
-                  },
+                },
             };
             chart = Chart.lineChart({ el, data, options });
         });
