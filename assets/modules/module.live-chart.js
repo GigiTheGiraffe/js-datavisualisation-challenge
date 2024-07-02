@@ -34,7 +34,6 @@ function createLiveChart() {
                     width: 'auto', height: 500
                 },
             };
-
             chart = Chart.lineChart({ el, data, options });
         });
 }
@@ -49,13 +48,13 @@ function updateChart() {
             data.forEach(value => {
                 // Ajouter le nouvel élément à la fin du tableau dataPoints
                 dataPoints.push({
-                    x: parseInt(value[0]), 
+                    x: parseInt(value[0]),
                     y: parseInt(value[1])
                 });
             });
             let newData = [];
             dataPoints.forEach(point => {
-                newData.push(point.y); // Ajoute la valeur x comme catégorie
+                newData.push(point.y);
             });
             chart.addData(newData, i);
             i++;
@@ -64,4 +63,4 @@ function updateChart() {
 }
 
 // Appel fetchData() pour initialiser les données une seule fois au démarrage
-export { dataPoints, createLiveChart, updateChart };
+export { createLiveChart, updateChart };
