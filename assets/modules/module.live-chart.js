@@ -17,7 +17,7 @@ function createLiveChart() {
             const Chart = toastui.Chart;
             const el = liveChart;
             const data = {
-                categories: [],
+                categories: ['0','1', '2', '3', '4', '5', '6', '7', '8', '9'],
                 series: [
                     {
                         name: 'Valeur',
@@ -26,18 +26,20 @@ function createLiveChart() {
                 ],
             };
             dataPoints.forEach(point => {
-                data.categories.push(point.x); // Ajoute la valeur x comme catégorie
                 data.series[0].data.push(point.y); // Ajoute la valeur y comme valeur
             });
             const options = {
                 chart: {
                     width: 'auto', height: 500
                 },
+                series: {
+                    shift: true
+                  },
             };
             chart = Chart.lineChart({ el, data, options });
         });
 }
-let i = 9;
+let i = 10;
 function updateChart() {
     fetch("https://canvasjs.com/services/data/datapoints.php", {
         cache: "no-store" // Indique au navigateur de ne pas utiliser le cache pour avoir accès aux données aléatoires
@@ -56,9 +58,9 @@ function updateChart() {
             dataPoints.forEach(point => {
                 newData.push(point.y);
             });
+            let newCategory = [i++];
             newData = [newData[0]]
-            chart.addData(newData, i);
-            i++;
+            chart.addData(newData, newCategory);
         });
     setTimeout(function () { updateChart() }, 1000); // Mis à jour toutes les secondes
 }
