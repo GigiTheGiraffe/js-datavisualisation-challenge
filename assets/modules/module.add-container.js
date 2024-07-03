@@ -30,4 +30,4 @@ placeContainer(bodyContent, liveChart, placeLiveAndCrimeChart);
 placeContainer(placeLiveAndCrimeChart, chartCrime, PlaceChartCrime);
 //Placer le container sections de chartHomicide avant la table de homicide
 placeContainer(placeLiveAndCrimeChart, chartHomicide, PlaceChartHomicide);
-export { liveChart };
+export { liveChart, chartHomicide, chartCrime };

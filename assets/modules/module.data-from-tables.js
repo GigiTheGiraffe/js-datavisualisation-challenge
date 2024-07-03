@@ -1,14 +1,17 @@
 //Fonction qui prend l'id d'une table et renvoie les données dans la table
 function selectTd(idTable) {
-const table = document.getElementById(idTable);
-const rows = table.getElementsByTagName("tr");
-const data = [];
-for (let i = 1; i < rows.length; i++) {
-const td = rows[i]. getElementsByTagName("td");
-for (let numbers of td) {
-    data.push(numbers.innerText);
+    const data = [];
+    const table = document.getElementById(idTable);
+    const rows = table.getElementsByTagName("tr");
+    const cells = rows[2].getElementsByTagName("td");
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        for (let j = 0; j < cells.length; j++) {
+            data.push(cells[j].innerText);
+        }
+    }
+    return data;
 }
-}
-return data;
-}
-export { selectTd }
+const tableCrime = selectTd("table1");
+const tableHomicide = selectTd("table2");
+export { tableCrime, tableHomicide };
