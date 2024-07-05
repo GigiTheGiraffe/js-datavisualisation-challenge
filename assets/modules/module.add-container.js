@@ -5,6 +5,13 @@ function createContainer(id) {
     section.style.height = "auto";
     return section;
 }
+function createCanva(id) {
+    const canva = document.createElement("canvas");
+    canva.setAttribute("id", id);
+    canva.style.width = "100%";
+    canva.style.height = "800px";
+    return canva;
+}
 /*Fonction pour insérer un conteneur dans un élément spécifié à une position donnée.
 element : l'élément parent dans lequel le conteneur sera placé.
 container: le conteneur à insérer dans l'élément parent.
@@ -15,7 +22,7 @@ function placeContainer(element, container, place) {
 element.insertBefore(container, place);
 }
 //créer le container sections de chartHomicide et les const du DOM pour le placer
-const chartCrime = createContainer("chartCrime");
+const chartCrime = createCanva("chartCrime");
 const PlaceChartCrime = document.getElementById("table1");
 //créer le container sections de chartHomicide et les const du DOM pour le placer
 const chartHomicide = createContainer("chartHomicide");
