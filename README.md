@@ -17,7 +17,7 @@ Ce projet a pour objectif de rendre un article de l'institution européenne plus
    
 1. **Graphiques interactifs** : Ajout de deux graphiques interactifs basés sur des données inline.   
 2. **Données en temps réel** : Un graphique supplémentaire basé sur des données récupérées en temps réel via une requête AJAX.   
-3. **Technologies utilisées** : JavaScript, HTML, CSS, et la bibliothèque de visualisation de données ToastUi-Chart.   
+3. **Technologies utilisées** : JavaScript, HTML, CSS, et les bibliothèques de visualisation de données ToastUi-Chart et Chart.js.   
    
 ---   
    
@@ -42,7 +42,7 @@ Je suis un jeune développeur en formation chez BeCode, passionné par les techn
 ### Technologie   
    
 - **JavaScript** : Manipulation du DOM, requêtes AJAX/FETCH.   
-- **Bibliothèque de visualisation** : ToastUi-Chart.   
+- **Bibliothèques de visualisation** : ToastUi-Chart, Chart.js.   
 - **HTML & CSS** : Intégration et mise en forme.    
    
 ### Stratégie de déploiement   
@@ -53,7 +53,8 @@ Je suis un jeune développeur en formation chez BeCode, passionné par les techn
    
 1. **Manipulation du DOM** : Insérer les graphiques interactifs au bon emplacement dans le document.   
 2. **Requêtes AJAX/FETCH** : Récupérer les données en temps réel et les utiliser pour créer des graphiques.   
-3. **Utilisation de la bibliothèque ToastUi-Chart** : Intégrer et utiliser ToastUi-Chart pour générer les graphiques.   
+3. **Utilisation de la bibliothèque ToastUi-Chart** : Intégrer et utiliser ToastUi-Chart pour générer les graphiques.
+4. **Utilisation de la bibliothèque Chart.js** : Intégrer et utiliser Chart.js pour générer les graphiques.   
    
 ---   
    
